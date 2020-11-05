@@ -22,7 +22,7 @@ export class GameComponent implements OnInit, OnChanges {
   @Input() lang = 'lv';
   keys: KeyPress[] = [];
   start = false;
-  speed = 2500;
+  speed = 2000;
   words: Word[];
   word: Word;
   index = 0;

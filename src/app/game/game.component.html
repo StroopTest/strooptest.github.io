@@ -36,8 +36,16 @@
 <div *ngIf="gameOver" #overlayResults class="overlay-results">
   <div>
     <ul class="game-text">
-      <li>{{ ("correct" | translate) + ": " + result.correct }}</li>
-      <li>{{ ("wrong" | translate) + ": " + result.wrong }}</li>
+      <li>
+        <span class="title-green">{{ ("correct" | translate) + ": " }}</span>
+        <span class="result">{{ result.correct }}</span>
+        
+      </li>
+      <li>
+        <span class="title-red">{{ ("wrong" | translate) + ": " }}</span>
+        <span class="result">{{ result.wrong }}</span>
+        
+      </li>
     </ul>
   </div>
   <button class="btn-restart" (click)="restart()">
