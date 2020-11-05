@@ -1,0 +1,16 @@
+{
+  "start": "START",
+  "correct": "CORRECT",
+  "wrong": "WRONG",
+  "restart": "RESTART",
+  "red": "RED",
+  "green": "GREEN",
+  "yellow": "YELLOW",
+  "blue": "BLUE",
+  "desc.red": "press button \"r\", because ink is red",
+  "desc.green": "press button \"g\", because ink is green",
+  "desc.yellow": "press button \"y\", because ink is yellow",
+  "desc.blue": "press button \"b\", because ink is blue",
+  "rules": "RULES",
+  "task": "TASK"
+}

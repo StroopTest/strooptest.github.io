@@ -1,0 +1,16 @@
+{
+    "start": "SĀKT",
+    "correct": "PAREIZI",
+    "wrong": "NEPAREIZI",
+    "restart": "SĀKT VĒLREIZ",
+    "red": "SARKANS",
+    "green": "ZAĻŠ",
+    "yellow": "DZELTENS",
+    "blue": "ZILS",
+    "desc.red": "spied pogu \"s\", jo tinte ir sarkana",
+    "desc.green": "spied pogu \"z\", jo tinte ir zaļa",
+    "desc.yellow": "spied pogu \"d\", jo tinte ir dzeltena",
+    "desc.blue": "spied pogu \"z\", jo tinte ir zila",
+    "rules": "NOTEIKUMI",
+    "task": "UZDEVUMS"
+}
