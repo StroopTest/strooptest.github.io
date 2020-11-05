@@ -1,0 +1,167 @@
+$bg: #2f2f2f;
+$fg: #06c17f;
+$border-width: .5rem;
+$corner-size: 3rem;
+$dur: .3s;
+
+.game-container {
+  background: $bg;
+  width: 100%;
+  height: calc(100vh - 83px);
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.game-text{
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 83px);
+  top: 83px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $bg;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.overlay-results {
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 83px);
+  top: 83px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(173, 72, 72, 0.5);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+  text-align: center;
+}
+
+.btn-start {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .02rem;
+  cursor: pointer;
+  background: transparent;
+  border: $border-width solid currentColor;
+  padding: 1.5rem 2rem;
+  font-size: 2.2rem;
+  color: $fg;
+  position: relative;
+  transition: color $dur;
+  
+  &:hover {
+    color: pink;
+    &::before { width: 0; }
+    &::after { height: 0; }
+  }
+  &:active {
+    border-width: $border-width / 2;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    background: $bg;
+    z-index: 1;
+    transition: all $dur;
+  }
+
+  &::before {
+    width: calc(100% - #{$corner-size});
+    height: calc(101% + #{$border-width * 2});
+    top: -$border-width;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &::after {
+    height: calc(100% - #{$corner-size});
+    width: calc(101% + #{$border-width * 2});
+    left: -$border-width;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.btn-restart {
+  margin-top: 40px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .02rem;
+  cursor: pointer;
+  background: transparent;
+  border: $border-width solid currentColor;
+  padding: 1.5rem 2rem;
+  font-size: 2.2rem;
+  color: pink;
+  position: relative;
+}
+
+.btn-restart:hover {
+  background:rgba(158, 32, 53, 0.445);
+}
+
+.description {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+  font-size: 30px;
+  color: white;
+}
+
+.description-list {
+  text-align: left;
+}
+
+.fas {
+  color: white;
+  padding: 0 5px;
+}
+
+.title-red {
+  color: red;
+}
+
+.title-yellow {
+  color: yellow;
+}
+
+.title-green {
+  color: green;
+}
+
+.title-blue {
+  color:blue;
+}

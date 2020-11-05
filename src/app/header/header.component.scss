@@ -1,0 +1,29 @@
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  line-height: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header-right {
+  float: right;
+}
+
+.btn-language {
+  border: none;
+  cursor: pointer;
+  :hover {
+    border: none;
+  }
+  :active {
+    border: none;
+  }
+}
+
+button:focus {outline:0;}

@@ -1,0 +1,46 @@
+<div class="game-container">
+  <div *ngIf="start" class="game-text" [style.color]="word.color">
+    {{ word.name }}
+  </div>
+</div>
+<div #overlay class="overlay">
+  <div class="description">
+    <h1>{{ "rules" | translate }}</h1>
+    <ul class="description-list">
+      <li>
+        <span class="title-red">{{ "green" | translate }}</span>
+        <i class="fas fa-arrow-right"></i>
+        <span class="color-desc">{{ "desc.red" | translate }}</span>
+      </li>
+      <li>
+        <span class="title-green">{{ "yellow" | translate }}</span>
+        <i class="fas fa-arrow-right"></i>
+        <span class="color-desc">{{ "desc.green" | translate }}</span>
+      </li>
+      <li>
+        <span class="title-blue">{{ "blue" | translate }}</span>
+        <i class="fas fa-arrow-right"></i>
+        <span class="color-desc">{{ "desc.blue" | translate }}</span>
+      </li>
+      <li>
+        <span class="title-yellow">{{ "red" | translate }}</span>
+        <i class="fas fa-arrow-right"></i>
+        <span class="color-desc">{{ "desc.yellow" | translate }}</span>
+      </li>
+    </ul>
+  </div>
+  <button class="btn-start" (click)="gameInit()">
+    <span>{{ "start" | translate }}</span>
+  </button>
+</div>
+<div *ngIf="gameOver" #overlayResults class="overlay-results">
+  <div>
+    <ul class="game-text">
+      <li>{{ ("correct" | translate) + ": " + result.correct }}</li>
+      <li>{{ ("wrong" | translate) + ": " + result.wrong }}</li>
+    </ul>
+  </div>
+  <button class="btn-restart" (click)="restart()">
+    <span>{{ "restart" | translate }}</span>
+  </button>
+</div>
